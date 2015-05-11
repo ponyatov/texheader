@@ -1,0 +1,10 @@
+\ProvidesFile{lstobjdump.sty}
+\lstdefinelanguage{objdump}%
+{
+% 	showtabs=true,
+ 	alsoletter={.,\_},
+%  	comment=[l]{\#},
+  	keywords={CONTENTS,CODE,DATA,ALLOC,LOAD,READONLY},
+  	keywords=[2]{.text,.rodata,.data,.bss,.eh_frame,.comment},
+}
+\endinput

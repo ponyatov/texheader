@@ -1,0 +1,20 @@
+\ProvidesFile{lstmk.sty}
+\lstdefinelanguage{mk}%
+{
+	showtabs=true,
+	alsoletter={.,\+,\_,\-},
+ 	comment=[l]{\#},
+ 	keywords={.PHONY,shell,PWD,include},
+ 	keywords=[2]{GZ,SRC,TMP,ROOT,BOOT,DIRS,TC,ETC,USR,USRLIB},
+ 	keywords=[2]{BCC,TCC,MAKE,WGET},
+ 	keywords=[3]{BUILD,HOST,TARGET,APP,HW,CPU,ARCH,LIBS,APPS},
+ 	keywords=[3]{QEMU_CFG,CFG_KERNEL,INSTALL_HDR_PATH},
+ 	keywords=[3]{CFG_BINUTILS,CFG_CCLIBS,CFG_GCC0,CFG_GCC,CFG_GMP,CFG_MPFR,CFG_MPC},
+ 	keywords=[3]{CFG_ARCH,CFG_CPU},
+ 	keywords=[3]{ROOTREX,CFG_BUSYBOX},
+ 	keywords=[4]{dirs,gz,sdl,tc,gcc0,gcc,binutils,cclibs,core,kernel,ulibc},
+ 	keywords=[4]{root,boot,busybox,emu},
+ 	keywords=[5]{mkdir,ld,as,gcc,g++,qemu,qemu,cd,cat,echo,cp,make},
+ 	keywords=[5]{--enable,--with,--disable}
+}
+\endinput
