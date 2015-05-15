@@ -34,6 +34,10 @@
 \ifthenelse{\equal{\value{secdepth}}{-3}}{\subsection{#1}}{}
 \ifthenelse{\equal{\value{secdepth}}{-4}}{\subsubsection{#1}}{}
 }
+\newcommand{\secintro}[1]{
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
 
 % misc
 \usepackage{framed}
