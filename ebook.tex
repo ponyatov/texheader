@@ -5,6 +5,11 @@
 \renewcommand{\familydefault}{\sfdefault}
 \normalfont
 % pdflatex options
-\usepackage[unicode,colorlinks=false,pdfborderstyle={/S/U/W 1}]{hyperref}
+\input{../texheader/colors}
+\usepackage[
+	unicode,
+	colorlinks=false,
+	pdfborderstyle={/S/U/W 1}]{hyperref}
+%	linkbordercolor=Blue]{hyperref}
 \newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
 \usepackage[pdftex]{graphicx}
