@@ -1,15 +1,11 @@
 % e-book
 \documentclass[oneside,12pt]{book}
+%% screen paper layout (A5 landscape)
 \usepackage[paperwidth=210mm,paperheight=148mm,margin=5mm]{geometry}
-% font setup for screen reading
-\renewcommand{\familydefault}{\sfdefault}
-\normalfont
-% pdflatex options
-\input{../texheader/colors}
-\usepackage[
-	unicode,
-	colorlinks=false,
-	pdfborderstyle={/S/U/W 1}]{hyperref}
-%	linkbordercolor=Blue]{hyperref}
-\newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
+%% font setup for screen reading
+\renewcommand{\familydefault}{\sfdefault}\normalfont
+%% hyperlinks pdf style
+\usepackage[unicode,colorlinks=true,pdfborderstyle={/S/U/W 1}]{hyperref}
+%% graphics
 \usepackage[pdftex]{graphicx}
+\newcommand{\fig}[3]{\includegraphics[#3]{#2}}

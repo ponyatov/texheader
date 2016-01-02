@@ -1,65 +1,95 @@
 % computer-related markup: manuals, listings, CS
 
-% extra char sets
-\usepackage{wasysym} % smileys
-\usepackage{amssymb} % windows key
-
-% software menu & keys
+%% software menu & keys
 \usepackage[os=win]{menukeys}
+\usepackage{amssymb} % windows key
 \newcommand{\winstart}{$\boxplus$}
-\newcommand{\winr}{\keys{\winstart+R}}
+%\newcommand{\winr}{\keys{\winstart+R}}
 \newcommand{\lms}{$\lhd$}
-\newcommand{\dblms}{$\lhd\lhd$}
+%\newcommand{\dblms}{$\lhd\lhd$}
 \newcommand{\rms}{$\rhd$}
-\newcommand{\checkbox}{$\boxtimes$}
-\newcommand{\uncheckbox}{$\square$}
+%\newcommand{\checkbox}{$\boxtimes$}
+%\newcommand{\uncheckbox}{$\square$}
 
-\newcommand{\icon}[1]{\includegraphics[height=0.08\textheight]{#1}}
-
-% listings
+%% listings
 \usepackage{verbatim}
 \usepackage{listings}
 \lstset{
-basicstyle=\small, % or \tiny \small or \footnotesize
-extendedchars=true,inputencoding=utf8, % i18n
+basicstyle=\small,	% small text size
 frame=single, % show frames around
-numbers=left, numberstyle=\small,numbersep=1mm,% line numbering
-tabsize=4, % tab style
-keywordstyle=\color{Blue},%\texttt,
-keywordstyle={[2]\color{Green}},%\texttt,
-keywordstyle={[3]\color{Magenta}},%\texttt,
-keywordstyle={[4]\color{Red}},%\texttt,
-keywordstyle={[5]\color{Blue}},%\texttt,
-commentstyle=\color{Cyan}%\texttt%,
-% showspaces=false
+numbers=left,numberstyle=\small,numbersep=1mm, % line numbering
+%tabsize=4, % tab style
+%extendedchars=true,inputencoding=utf8, % i18n
+%keywordstyle=\color{Blue},%\texttt,
+%keywordstyle={[2]\color{Green}},%\texttt,
+%keywordstyle={[3]\color{Magenta}},%\texttt,
+%keywordstyle={[4]\color{Red}},%\texttt,
+%keywordstyle={[5]\color{Blue}},%\texttt,
+%commentstyle=\color{Cyan}%\texttt%,
+%showspaces=false
 }
 
-\usepackage{../texheader/lstmk}\lstdefinestyle{mk}{language=mk}
-\usepackage{../texheader/lstrc}\lstdefinestyle{rc}{language=rc}
-\usepackage{../texheader/lstsyslinux}\lstdefinestyle{syslinux}{language=syslinux}
-\usepackage{../texheader/lstobjdump}\lstdefinestyle{objdump}{language=objdump}
-
-\newcommand{\lst}[3]{\lstinputlisting[title=\href{#2}{#1}]{#3}}
-\newcommand{\lstx}[4]{\lstinputlisting[title=\href{#2}{#1},language=#4]{#3}}
-
+%% objects
 \newcommand{\file}[1]{\textbf{#1}}
-\newcommand{\internet}{Internet}
-\newcommand{\cpp}{$C^{+}_{+}$}
+
+%% languages
+\newcommand{\cpp}{$C^{++}$}
 \newcommand{\py}{Python}
+\newcommand{\java}{Java}
+\newcommand{\cs}{$C\sharp$}
+%\newcommand{\bi}{Ы}
+%\newcommand{\lisp}{Lisp}
+%\newcommand{\st}{SmallTalk}
+%\newcommand{\forth}{Forth}
 
-\newcommand{\var}[1]{\textcolor{Red}{#1}}
-\renewcommand{\cmd}[1]{\textcolor{Blue}{#1}}
-
-\newcommand{\linux}{Linux}
+%% OSes
+\newcommand{\lin}{Linux}
 \newcommand{\win}{\winstart Windows}
+\newcommand{\andr}{Android}
 
-\newcommand{\ram}{ОЗУ}
-
+%% std programs
 \newcommand{\make}{make}
-\newcommand{\eclipse}{\textcircled{$\equiv$}\textsc{eclipse}}
-\newcommand{\vim}{Vim}
+\newcommand{\vim}{(g)vim}
 
-\newcommand{\spice}{SPICE}
-\newcommand{\kicad}{\prog{KiCAD}}
-\newcommand{\eeschema}{\prog{eeschema}}
-\newcommand{\pcbnew}{\prog{pcbnew}}
+%% extra char sets
+%%\usepackage{wasysym} % smileys
+
+%%extendedchars=true,inputencoding=utf8, % i18n
+%keywordstyle=\color{magenta},%\texttt,
+%commentstyle=\color{darkcyan}
+%}
+%\newcommand{\pack}[1]{\textbf{\textcolor{blue}{#1}}} % program / package
+%\newcommand{\prog}[1]{\textbf{\textcolor{blue}{#1}}}
+%
+%\newcommand{\lst}[3]{\lstinputlisting[title=#1,language=#3]{#2}}
+%\newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
+
+
+
+%% extra char sets
+%\usepackage{wasysym} % smileys
+
+%\newcommand{\icon}[1]{\includegraphics[height=0.08\textheight]{#1}}
+
+%\usepackage{../texheader/lstmk}\lstdefinestyle{mk}{language=mk}
+%\usepackage{../texheader/lstrc}\lstdefinestyle{rc}{language=rc}
+%\usepackage{../texheader/lstsyslinux}\lstdefinestyle{syslinux}{language=syslinux}
+%\usepackage{../texheader/lstobjdump}\lstdefinestyle{objdump}{language=objdump}
+
+%\newcommand{\lst}[3]{\lstinputlisting[title=\href{#2}{#1}]{#3}}
+%\newcommand{\lstx}[4]{\lstinputlisting[title=\href{#2}{#1},language=#4]{#3}}
+
+%\newcommand{\internet}{Internet}
+
+%\newcommand{\var}[1]{\textcolor{Red}{#1}}
+%\renewcommand{\cmd}[1]{\textcolor{Blue}{#1}}
+
+%\newcommand{\ram}{ОЗУ}
+
+%\newcommand{\eclipse}{\textcircled{$\equiv$}\textsc{eclipse}}
+%
+
+%\newcommand{\spice}{SPICE}
+%\newcommand{\kicad}{\prog{KiCAD}}
+%\newcommand{\eeschema}{\prog{eeschema}}
+%\newcommand{\pcbnew}{\prog{pcbnew}}
