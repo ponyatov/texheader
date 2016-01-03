@@ -2,35 +2,22 @@
 
 %% extra packages
 \usepackage{framed}		% boxed text
+\usepackage{enumitem}	% [nosep] option in lists/enums
+%\usepackage{makeidx}\makeindex	% enable index
 
 %% typical macros
 \newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
 \newcommand{\note}[1]{\footnote{\ #1}}
+\renewcommand{\emph}[1]{\textcolor{Red}{#1}}
 \newcommand{\cp}[1]{\note{\copyright\ #1}}
-\newcommand{\term}[1]{\textcolor{Blue}{#1}}
+\newcommand{\term}[1]{\textcolor{Green}{#1}}
+\newcommand{\termdef}[2]{\term{#2}}
 
 %\usepackage{titling}
-%\usepackage{enumitem}	% [nosep] option in lists/enums
-%\usepackage{makeidx}\makeindex	% enable index
 
-%\newcommand{\note}[1]{\footnote{\ #1}}
 %\newcommand{\odurino}{Odurino}
 
-%\usepackage{verbatim}
-
-%\newcommand{\cpp}{$C^+_+$}
-%\newcommand{\bi}{bI}
-%\newcommand{\F}{Форт}
-%\newcommand{\py}{Python}
-%\newcommand{\lisp}{Lisp}
-
-%\renewcommand{\emph}[1]{\textcolor{Red}{#1}}
-%
 %\newcommand{\termdef}[1]{\textcolor{Green}{#1}}
 
-%\bibliographystyle{acm}
-
 %\renewcommand{\emph}[1]{\textcolor{blue}{#1}}
-%\newcommand{\term}[1]{\textcolor{blue}{#1}}
-%\newcommand{\termdef}[2]{\term{#2}}
 
