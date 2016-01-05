@@ -18,7 +18,7 @@
 basicstyle=\small,	% small text size
 frame=single, % show frames around
 numbers=left,numberstyle=\small,numbersep=1mm, % line numbering
-%tabsize=4, % tab style
+tabsize=4, % tab style
 %extendedchars=true,inputencoding=utf8, % i18n
 keywordstyle=\color{Blue},
 %keywordstyle={[2]\color{Green}},%\texttt,
@@ -29,30 +29,29 @@ commentstyle=\color{Cyan},
 %showspaces=false
 }
 \newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
-%\newcommand{\lst}[3]{\lstinputlisting[title=\href{#2}{#1}]{#3}}
-%[4]{[title=\href{#2}{#1},language=#4]{#3}}
+\newcommand{\lst }[3]{\lstinputlisting[title=#1,language=#3]{#2}}
 
 %% objects
 \newcommand{\file}[1]{\textbf{#1}}
 
 %% languages
 \newcommand{\cpp}{$C^{++}$}
-\newcommand{\py}{Python}
-\newcommand{\java}{Java}
+\newcommand{\py}{$Python$}
+\newcommand{\java}{$Java$}
 \newcommand{\cs}{$C\sharp$}
-%\newcommand{\bi}{Ы}
-%\newcommand{\lisp}{Lisp}
-%\newcommand{\st}{SmallTalk}
-%\newcommand{\forth}{Forth}
+\newcommand{\bi}{$bI$}
+%\newcommand{\lisp}{$Lisp$}
+\newcommand{\st}{$SmallTalk$}
+%\newcommand{\forth}{$Forth$}
 
 %% OSes
-\newcommand{\lin}{Linux}
-\newcommand{\win}{\winstart Windows}
-\newcommand{\andr}{Android}
+\newcommand{\lin}{$Linux$}
+\newcommand{\win}{\winstart $Windows$}
+\newcommand{\andr}{$Android$}
 
 %% std programs
 \newcommand{\make}{make}
-\newcommand{\vim}{(g)vim}
+\newcommand{\vim}{\prog{$(g)Vim$}}
 \newcommand{\eclipse}{\textcircled{$\equiv$}\textsc{eclipse}}
 
 %% extra char sets
