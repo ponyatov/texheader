@@ -8,8 +8,8 @@
 \newcommand{\lms}{$\lhd$}
 %\newcommand{\dblms}{$\lhd\lhd$}
 \newcommand{\rms}{$\rhd$}
-%\newcommand{\checkbox}{$\boxtimes$}
-%\newcommand{\uncheckbox}{$\square$}
+\newcommand{\checkbox}{$\boxtimes$}
+\newcommand{\uncheckbox}{$\square$}
 
 %% listings
 \usepackage{verbatim}
@@ -28,6 +28,8 @@ keywordstyle=\color{Blue},
 commentstyle=\color{Cyan},
 %showspaces=false
 }
+%\usepackage{../texheader/lstrc}\lstdefinestyle{bI}{language=bI}
+
 \newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
 \newcommand{\lst }[3]{\lstinputlisting[title=#1,language=#3]{#2}}
 
@@ -40,19 +42,22 @@ commentstyle=\color{Cyan},
 \newcommand{\java}{$Java$}
 \newcommand{\cs}{$C\sharp$}
 \newcommand{\bi}{$bI$}
-%\newcommand{\lisp}{$Lisp$}
+\newcommand{\lisp}{$Lisp$}
 \newcommand{\st}{$SmallTalk$}
-%\newcommand{\forth}{$Forth$}
+\newcommand{\forth}{$Forth$}
 
 %% OSes
 \newcommand{\lin}{$Linux$}
 \newcommand{\win}{\winstart $Windows$}
 \newcommand{\andr}{$Android$}
 
+\newcommand{\prog}[1]{\textbf{\textcolor{blue}{#1}}}
 %% std programs
-\newcommand{\make}{make}
+\newcommand{\make}{\textbf{make}}
+\newcommand{\gdb}{\textbf{gdb}}
 \newcommand{\vim}{\prog{$(g)Vim$}}
 \newcommand{\eclipse}{\textcircled{$\equiv$}\textsc{eclipse}}
+\newcommand{\vrep}{\prog{v-rep}}
 
 %% extra char sets
 %%\usepackage{wasysym} % smileys
@@ -60,16 +65,10 @@ commentstyle=\color{Cyan},
 %%extendedchars=true,inputencoding=utf8, % i18n
 %keywordstyle=\color{magenta},%\texttt,
 %commentstyle=\color{darkcyan}
-%
-
-\newcommand{\prog}[1]{\textbf{\textcolor{blue}{#1}}}
 
 %\newcommand{\pack}[1]{\textbf{\textcolor{blue}{#1}}} % program / package
 %\newcommand{\lst}[3]{\lstinputlisting[title=#1,language=#3]{#2}}
 %\newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
-
-%% extra char sets
-%\usepackage{wasysym} % smileys
 
 %\newcommand{\icon}[1]{\includegraphics[height=0.08\textheight]{#1}}
 
@@ -77,7 +76,6 @@ commentstyle=\color{Cyan},
 %\usepackage{../texheader/lstrc}\lstdefinestyle{rc}{language=rc}
 %\usepackage{../texheader/lstsyslinux}\lstdefinestyle{syslinux}{language=syslinux}
 %\usepackage{../texheader/lstobjdump}\lstdefinestyle{objdump}{language=objdump}
-
 
 %\newcommand{\internet}{Internet}
 
