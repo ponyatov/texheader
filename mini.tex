@@ -47,6 +47,7 @@
 \newcommand{\class}[1]{\textbf{#1}}
 
 %% languages
+\newcommand{\ci}{Си}
 \newcommand{\cpp}{$C^+_+$}
 \newcommand{\py}{$Python$}
 \newcommand{\bi}{$bI$}
@@ -80,9 +81,9 @@ keywordstyle=\textbf,
 commentstyle=\textit
 }
 \newcounter{listingnum}
-\newcommand{\lstx}[2]{\refstepcounter{listingnum}
+\newcommand{\lstx}[2]{%\refstepcounter{listingnum}
 	\lstinputlisting[title=#1]{#2}}
-\newcommand{\lst }[3]{\refstepcounter{listingnum}
+\newcommand{\lst }[3]{%\refstepcounter{listingnum}
 	\lstinputlisting[title=#1,language=#3]{#2}}
 \newcommand{\lstv}[2]{\refstepcounter{listingnum}
 	\paragraph{Листинг \thelistingnum: #1}\verbatiminput{#2}}
