@@ -9,7 +9,7 @@
 %,pdfborderstyle={/S/U/W 1}
 %% graphics
 \usepackage[pdftex]{graphicx}
-\newcommand{\fig}[3]{\includegraphics[#3]{#2}\textbf{#1}}
+\newcommand{\fig}[3]{\bigskip\noindent\includegraphics[#3]{#2}\textbf{#1}\bigskip}
 \newcommand{\bibfig}[1]{\includegraphics[height=0.3\textheight]{#1}}
 %\newcommand{\figx}[2]{\includegraphics[#1]{#2}}
 % [nosep] option in lists/enums
@@ -43,6 +43,7 @@
 \newcommand{\file}[1]{\textbf{#1}}
 \newcommand{\dir}[1]{\textbf{\textit{#1}}}
 \newcommand{\var}[1]{\texttt{#1}}
+\newcommand{\addr}[1]{\texttt{#1}}
 \newcommand{\prog}[1]{\textbf{#1}}
 \newcommand{\class}[1]{\textbf{#1}}
 
