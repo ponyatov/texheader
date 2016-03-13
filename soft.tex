@@ -1,13 +1,29 @@
-Для загрузки и компиляции необходимо установить:
+Для загрузки и компиляции необходимо установить:\bigskip
 
+\begin{description}[nosep]
+	\item[\prog{GNU toolchain}] пакет (кросс-)компиляторов GNU\\
 \begin{description}
-	\item{\prog{GNU toolchain}} пакет (кросс-)компиляторов GNU\\
-		\win: дистрибутив \prog{MinGW} \url{http://www.mingw.org/}
-	\item{\prog{Git}} система контроля версий\\
-		\win: \url{https://git-scm.com/}
-	\item{\vim} редактор текстовых файлов (IDE)\note{необязателен, клавиатурные
+	\item[\win] дистрибутив \prog{MinGW} \url{http://www.mingw.org/},\\
+		установить \prog{gcc g++ make flex bison},\\
+		если нужна компиляция научных библиотек \prog{fortran}
+	\item[\linux]
+	\verb|sudo apt install gcc g++ make flex bison [ fortran ... ]|
+\end{description}
+	\item[\prog{Git}] система контроля версий\\
+\begin{description}
+	\item[\win] \url{https://git-scm.com/}
+\end{description}
+\end{description}
+
+\paragraph{Необязательное ПО\\}
+
+\begin{description}[nosep]
+	\item[\vim] редактор текстовых файлов (IDE)\note{необязателен, клавиатурные
 	сочетания и приемы работы отличны от \win-feel и требуют привыкания,
 но отличается легковесностью, настраиваемостью (скриптами) и мультиплатформенностью}\\
-		\win: \url{http://www.vim.org/download.php}
+\begin{description}
+	\item[\win] \url{http://www.vim.org/download.php}
+\end{description}
+\item[\LaTeX] система верстки на основе языка разметки
 \end{description}
 
