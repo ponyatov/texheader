@@ -16,6 +16,8 @@
 \usepackage{enumitem}
 % frame box
 \usepackage{framed}
+% indexing
+\usepackage{makeidx}\makeindex
 
 % Cyrillization
 \usepackage[T1,T2A]{fontenc}
@@ -102,4 +104,4 @@ commentstyle=\textit
 \renewcommand{\emph}[1]{\textbf{#1}}
 \newcommand{\cp}[1]{\note{\copyright\ #1}}
 \newcommand{\term}[1]{\textit{#1}}
-\newcommand{\termdef}[2]{\textbf{\textit{#1}}}
+\newcommand{\termdef}[2]{\textbf{\textit{#1}}\index{#2}}
