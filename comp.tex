@@ -4,87 +4,146 @@
 \usepackage[os=win]{menukeys}
 \usepackage{amssymb} % windows key
 \newcommand{\winstart}{$\boxplus$}
-%\newcommand{\winr}{\keys{\winstart+R}}
+\newcommand{\winr}{\keys{\winstart+R}}
 \newcommand{\lms}{$\lhd$}
-%\newcommand{\dblms}{$\lhd\lhd$}
+\newcommand{\dblms}{$\lhd\lhd$}
 \newcommand{\rms}{$\rhd$}
 \newcommand{\checkbox}{$\boxtimes$}
 \newcommand{\uncheckbox}{$\square$}
+
+%% typical =objects
+\newcommand{\file}[1]{\textbf{#1}}
+\newcommand{\dir}[1]{\textbf{\textit{#1}}}
+\newcommand{\var}[1]{\texttt{#1}}
+\newcommand{\addr}[1]{\texttt{#1}}
+\newcommand{\prog}[1]{\textcolor{brown}{\textbf{#1}}}
+\newcommand{\class}[1]{\textbf{#1}}
+
+%% languages
+\newcommand{\ci}{Си}
+\newcommand{\cpp}{$C^+_+$}
+\newcommand{\py}{$Python$}
+\newcommand{\bi}{$bI$}
+\newcommand{\st}{$SmallTalk$}
+\newcommand{\lisp}{$Lisp$}
+\newcommand{\ml}{$ML$}
+\newcommand{\js}{$JavaScript$}
+\newcommand{\prolog}{$Prolog$}
+
+%% OSes
+\newcommand{\linux}{$Linux$}
+\newcommand{\debian}{$Debian\ GNU/Linux$}
+\newcommand{\win}{$Windows$}
+
+%% std.progs
+\newcommand{\vim}{\prog{(g)Vim}}
+\newcommand{\gnut}{\prog{GNU Toolchain}}
+\newcommand{\qemu}{\prog{Qemu}}
+\newcommand{\mingw}{\prog{MinGW}}
+
+%% symbolic math
+\newcommand{\wolfram}{\prog{WolframAlpha}}
+\newcommand{\gnuplot}{\prog{GNUPLOT}}
+\newcommand{\octave}{\prog{Octave}}
+\newcommand{\maxima}{\prog{Maxima}}
+
+%% MCU
+\newcommand{\cm}{Cortex-M}
 
 %% listings
 \usepackage{verbatim}
 \usepackage{listings}
 \lstset{
-basicstyle=\small,	% small text size
-frame=single, % show frames around
-numbers=left,numberstyle=\small,numbersep=1mm, % line numbering
-tabsize=4, % tab style
-%extendedchars=true,inputencoding=utf8, % i18n
-keywordstyle=\color{Blue},
-%keywordstyle={[2]\color{Green}},%\texttt,
-%keywordstyle={[3]\color{Magenta}},%\texttt,
-%keywordstyle={[4]\color{Red}},%\texttt,
-%keywordstyle={[5]\color{Blue}},%\texttt,
-commentstyle=\color{Cyan},
-%showspaces=false
+basicstyle=\small,
+frame=single,
+numbers=left,numberstyle=\small,numbersep=2mm,
+tabsize=4,
+keywordstyle=\textbf,
+commentstyle=\textit
 }
-%\usepackage{../texheader/lstrc}\lstdefinestyle{bI}{language=bI}
+\newcounter{listingnum}
+\newcommand{\lstx}[2]{%\refstepcounter{listingnum}
+	\lstinputlisting[title=#1]{#2}}
+\newcommand{\lst }[3]{%\refstepcounter{listingnum}
+	\lstinputlisting[title=#1,language=#3]{#2}}
+\newcommand{\lstv}[2]{\refstepcounter{listingnum}
+	\paragraph{Листинг \thelistingnum: #1}\verbatiminput{#2}}
 
-\newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
-\newcommand{\lst }[3]{\lstinputlisting[title=#1,language=#3]{#2}}
 
-%% objects
-\newcommand{\file}[1]{\textbf{#1}}
-
-%% languages
-\newcommand{\cpp}{$C^{++}$}
-\newcommand{\py}{$Python$}
-\newcommand{\java}{$Java$}
-\newcommand{\cs}{$C\sharp$}
-\newcommand{\bi}{$bI$}
-\newcommand{\lisp}{$Lisp$}
-\newcommand{\st}{$SmallTalk$}
-\newcommand{\forth}{$Forth$}
-
-%% OSes
-\newcommand{\lin}{$Linux$}
-\newcommand{\win}{\winstart $Windows$}
-\newcommand{\andr}{$Android$}
-
-\newcommand{\prog}[1]{\textbf{\textcolor{blue}{#1}}}
-%% std programs
-\newcommand{\make}{\textbf{make}}
-\newcommand{\gdb}{\textbf{gdb}}
-\newcommand{\vim}{\prog{$(g)Vim$}}
-\newcommand{\eclipse}{\textcircled{$\equiv$}\textsc{eclipse}}
-\newcommand{\vrep}{\prog{V-REP}}
-
-%% extra char sets
-%%\usepackage{wasysym} % smileys
-
-%%extendedchars=true,inputencoding=utf8, % i18n
-%keywordstyle=\color{magenta},%\texttt,
-%commentstyle=\color{darkcyan}
-
-%\newcommand{\pack}[1]{\textbf{\textcolor{blue}{#1}}} % program / package
-%\newcommand{\lst}[3]{\lstinputlisting[title=#1,language=#3]{#2}}
-%\newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
-
-%\newcommand{\icon}[1]{\includegraphics[height=0.08\textheight]{#1}}
-
-%\usepackage{../texheader/lstmk}\lstdefinestyle{mk}{language=mk}
-%\usepackage{../texheader/lstrc}\lstdefinestyle{rc}{language=rc}
-%\usepackage{../texheader/lstsyslinux}\lstdefinestyle{syslinux}{language=syslinux}
-%\usepackage{../texheader/lstobjdump}\lstdefinestyle{objdump}{language=objdump}
-
-%\newcommand{\internet}{Internet}
-
-%\newcommand{\var}[1]{\textcolor{Red}{#1}}
-%\renewcommand{\cmd}[1]{\textcolor{Blue}{#1}}
-
-%\newcommand{\ram}{ОЗУ}
-
-%\newcommand{\spice}{SPICE}
-%\newcommand{\kicad}{\prog{KiCAD}}
-%\newcommand{\eeschema}{\prog{eeschema}}
-%\newcommand{\pcbnew}{\prog{pcbnew}}
+% %% listings
+% \usepackage{verbatim}
+% \usepackage{listings}
+% \lstset{
+% basicstyle=\small,	% small text size
+% frame=single, % show frames around
+% numbers=left,numberstyle=\small,numbersep=1mm, % line numbering
+% tabsize=4, % tab style
+% %extendedchars=true,inputencoding=utf8, % i18n
+% keywordstyle=\color{Blue},
+% %keywordstyle={[2]\color{Green}},%\texttt,
+% %keywordstyle={[3]\color{Magenta}},%\texttt,
+% %keywordstyle={[4]\color{Red}},%\texttt,
+% %keywordstyle={[5]\color{Blue}},%\texttt,
+% commentstyle=\color{Cyan},
+% %showspaces=false
+% }
+% %\usepackage{../texheader/lstrc}\lstdefinestyle{bI}{language=bI}
+% 
+% \newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
+% \newcommand{\lst }[3]{\lstinputlisting[title=#1,language=#3]{#2}}
+% 
+% %% objects
+% \newcommand{\file}[1]{\textbf{#1}}
+% 
+% %% languages
+% \newcommand{\cpp}{$C^{++}$}
+% \newcommand{\py}{$Python$}
+% \newcommand{\java}{$Java$}
+% \newcommand{\cs}{$C\sharp$}
+% \newcommand{\bi}{$bI$}
+% \newcommand{\lisp}{$Lisp$}
+% \newcommand{\st}{$SmallTalk$}
+% \newcommand{\forth}{$Forth$}
+% 
+% %% OSes
+% \newcommand{\lin}{$Linux$}
+% \newcommand{\win}{\winstart $Windows$}
+% \newcommand{\andr}{$Android$}
+% 
+% \newcommand{\prog}[1]{\textbf{\textcolor{blue}{#1}}}
+% %% std programs
+% \newcommand{\make}{\textbf{make}}
+% \newcommand{\gdb}{\textbf{gdb}}
+% \newcommand{\vim}{\prog{$(g)Vim$}}
+% \newcommand{\eclipse}{\textcircled{$\equiv$}\textsc{eclipse}}
+% \newcommand{\vrep}{\prog{V-REP}}
+% 
+% %% extra char sets
+% %%\usepackage{wasysym} % smileys
+% 
+% %%extendedchars=true,inputencoding=utf8, % i18n
+% %keywordstyle=\color{magenta},%\texttt,
+% %commentstyle=\color{darkcyan}
+% 
+% %\newcommand{\pack}[1]{\textbf{\textcolor{blue}{#1}}} % program / package
+% %\newcommand{\lst}[3]{\lstinputlisting[title=#1,language=#3]{#2}}
+% %\newcommand{\lstx}[2]{\lstinputlisting[title=#1]{#2}}
+% 
+% %\newcommand{\icon}[1]{\includegraphics[height=0.08\textheight]{#1}}
+% 
+% %\usepackage{../texheader/lstmk}\lstdefinestyle{mk}{language=mk}
+% %\usepackage{../texheader/lstrc}\lstdefinestyle{rc}{language=rc}
+% %\usepackage{../texheader/lstsyslinux}\lstdefinestyle{syslinux}{language=syslinux}
+% %\usepackage{../texheader/lstobjdump}\lstdefinestyle{objdump}{language=objdump}
+% 
+% %\newcommand{\internet}{Internet}
+% 
+% %\newcommand{\var}[1]{\textcolor{Red}{#1}}
+% %\renewcommand{\cmd}[1]{\textcolor{Blue}{#1}}
+% 
+% %\newcommand{\ram}{ОЗУ}
+% 
+% %\newcommand{\spice}{SPICE}
+% %\newcommand{\kicad}{\prog{KiCAD}}
+% %\newcommand{\eeschema}{\prog{eeschema}}
+% %\newcommand{\pcbnew}{\prog{pcbnew}}
