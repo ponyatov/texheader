@@ -1,18 +1,35 @@
-% e-book
+% Universal LaTeX headers for e-book publications
 \documentclass[oneside,11pt]{book}
 %% mobile phone optimized
-\usepackage[paperwidth=145mm,paperheight=210mm,margin=1mm]{geometry}
-%% screen paper layout (A5 landscape)
-%\usepackage[paperwidth=210mm,paperheight=145mm,margin=5mm]{geometry}
-
-%%% font setup for screen reading
-%\renewcommand{\familydefault}{\sfdefault}\normalfont
+\usepackage[paperwidth=210mm,paperheight=145mm,margin=1mm]{geometry}
+%% font setup for screen reading
+\renewcommand{\familydefault}{\sfdefault}\normalfont
 %% hyperlinks pdf style
 \usepackage[unicode,colorlinks=true]{hyperref}
-%,pdfborderstyle={/S/U/W 1}
 
-%% graphics
-\usepackage[pdftex]{graphicx}
-\newcommand{\fig}[3]{\bigskip\noindent\includegraphics[#3]{#2}\textbf{#1}\bigskip}
-\newcommand{\bibfig}[1]{\includegraphics[height=0.3\textheight]{#1}}
-%\newcommand{\figx}[2]{\includegraphics[#1]{#2}}
+% Cyrillization
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{indentfirst}
+
+% relative sectioning
+\usepackage{ifthen}
+\newcounter{secdepth}\setcounter{secdepth}{0}
+\newcommand{\secup}{\addtocounter{secdepth}{1}}
+\newcommand{\secdown}{\addtocounter{secdepth}{-1}}
+\newcommand{\secrel}[1]{
+\ifthenelse{\equal{\value{secdepth}}{0}}{\part{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-1}}{\chapter{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-2}}{\section{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-3}}{\subsection{#1}}{}
+\ifthenelse{\equal{\value{secdepth}}{-4}}{\subsubsection{#1}}{}
+}
+\newcommand{\secly}[1]{
+\section*{#1}
+\addcontentsline{toc}{section}{#1}
+}
+
+% misc
+\newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
+
+
