@@ -1,7 +1,7 @@
 % Universal LaTeX headers for e-book publications
-\documentclass[oneside,11pt]{book}
+\documentclass[oneside,12pt]{book}
 %% mobile phone optimized
-\usepackage[paperwidth=210mm,paperheight=145mm,margin=1mm]{geometry}
+\usepackage[paperwidth=210mm,paperheight=145mm,margin=2mm]{geometry}
 %% font setup for screen reading
 \renewcommand{\familydefault}{\sfdefault}\normalfont
 %% hyperlinks pdf style
@@ -29,7 +29,11 @@
 \addcontentsline{toc}{section}{#1}
 }
 
+%% software menu & keys
+\usepackage[os=win]{menukeys}
+
 % misc
 \newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
-
+\renewcommand{\emph}[1]{\textcolor{blue}{#1}}
+\newcommand{\note}[1]{\footnote{\ #1}}
 
