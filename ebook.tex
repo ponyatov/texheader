@@ -7,8 +7,19 @@
 %% hyperlinks pdf style
 \usepackage[unicode,colorlinks=true]{hyperref}
 
+% xcolor fixes
+\usepackage{xcolor}
+\definecolor{red}{rgb}{0.7,0,0}		% R
+\definecolor{RED}{rgb}{0.7,0,0}
+\definecolor{green}{rgb}{0,0.7,0}	% G
+\definecolor{GREEN}{rgb}{0,0.7,0}
+\definecolor{blue}{rgb}{0,0,0.7}	% B
+\definecolor{BLUE}{rgb}{0,0,0.7}
+
 % Cyrillization
+%% \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
+%% \usepackage[cp1251]{inputenc}
 \usepackage[english,russian]{babel}
 \usepackage{indentfirst}
 
@@ -36,4 +47,3 @@
 \newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
 \renewcommand{\emph}[1]{\textcolor{blue}{#1}}
 \newcommand{\note}[1]{\footnote{\ #1}}
-
