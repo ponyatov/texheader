@@ -40,10 +40,37 @@
 \addcontentsline{toc}{section}{#1}
 }
 
+% computer-related markup: manuals, listings, CS
+
 %% software menu & keys
 \usepackage[os=win]{menukeys}
 
+%% listings
+\usepackage{verbatim}
+\usepackage{listings}
+\lstset{
+basicstyle=\small,
+frame=single,
+numbers=left,numberstyle=\small,numbersep=2mm,
+xleftmargin=3mm,xrightmargin=2mm,
+tabsize=4,
+keywordstyle=\textbf,
+commentstyle=\color{blue}\textbf,
+extendedchars=\true
+}
+\newcommand{\lst}[1]{\lstinputlisting{#1}}
+
+%% languages
+\newcommand{\ci}{Си}
+\newcommand{\cpp}{$C^+_+$}
+\newcommand{\py}{$Python$}
+\newcommand{\java}{$Java$}
+\newcommand{\racket}{$Racket$}
+
 % misc
 \newcommand{\email}[1]{$<$\href{mailto:#1}{#1}$>$}
-\renewcommand{\emph}[1]{\textcolor{blue}{#1}}
-\newcommand{\note}[1]{\footnote{\ #1}}
+\renewcommand{\emph}[1]{\textcolor{red}{#1}}
+\newcommand{\term}[1]{\textcolor{green}{#1}}
+\newcommand{\termdef}[2]{\textcolor{green}{#1}\index{#2}}
+\newcommand{\note}[1]{\,\footnote{\ #1}}
+\newcommand{\ru}[1]{\textcolor{blue}{#1}}
