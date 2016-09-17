@@ -7,6 +7,10 @@
 %% hyperlinks pdf style
 \usepackage[unicode,colorlinks=true]{hyperref}
 
+% graphics
+\usepackage[pdftex]{graphicx}
+\newcommand{\fig}[3]{\bigskip\noindent\includegraphics[#3]{#2}\textbf{#1}\bigskip}
+
 % xcolor fixes
 \usepackage{xcolor}
 \definecolor{red}{rgb}{0.7,0,0}		% R
@@ -74,3 +78,5 @@ extendedchars=\true
 \newcommand{\termdef}[2]{\textcolor{green}{#1}\index{#2}}
 \newcommand{\note}[1]{\,\footnote{\ #1}}
 \newcommand{\ru}[1]{\textcolor{blue}{#1}}
+\usepackage{framed}
+
