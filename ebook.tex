@@ -58,11 +58,15 @@ frame=single,
 numbers=left,numberstyle=\small,numbersep=2mm,
 xleftmargin=3mm,xrightmargin=2mm,
 tabsize=4,
-keywordstyle=\textbf,
-commentstyle=\color{blue}\textbf,
+keywordstyle=\color{red},
+commentstyle=\color{blue},
 extendedchars=\true
 }
 \newcommand{\lst}[1]{\lstinputlisting{#1}}
+\newcommand{\lstt}[2]{\lstinputlisting[title=#1]{#2}}
+\newcommand{\lstx}[3]{\lstinputlisting[title=#1,language=#3]{#2}}
+
+%\usepackage{../texheader/lstrkt}\lstdefinestyle{rkt}{language=rkt}
 
 %% languages
 \newcommand{\ci}{Си}
