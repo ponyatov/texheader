@@ -31,4 +31,3 @@ tmp/%.png: fig/%.dot
 
 tmp/%$(EXE): lst/%.lpp
 	flex -o $@.c $< && $(CXX) -o $@ $@.c
-
