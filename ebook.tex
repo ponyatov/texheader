@@ -8,6 +8,10 @@
 \renewcommand{\familydefault}{\sfdefault}\normalfont
 %% hyperlinks pdf style
 \usepackage[unicode,colorlinks=true]{hyperref}
+%% fix heading styles for tiny paper
+\usepackage{titlesec}
+\titleformat{\chapter}{\Large\bfseries}{\thechapter.}{1em}{}
+\titleformat{\section}{\Large\bfseries}{\thechapter.}{1em}{}
 
 % graphics
 \usepackage[pdftex]{graphicx}
