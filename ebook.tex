@@ -11,7 +11,7 @@
 %% fix heading styles for tiny paper
 \usepackage{titlesec}
 \titleformat{\chapter}{\Large\bfseries}{\thechapter.}{1em}{}
-\titleformat{\section}{\Large\bfseries}{\thechapter.}{1em}{}
+\titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
 
 % graphics
 \usepackage[pdftex]{graphicx}
@@ -69,12 +69,23 @@ commentstyle=\color{blue},
 extendedchars=\true
 }
 \newcounter{lstcounter}
+%%% no syntax
 \newcommand{\lst}[1]{\refstepcounter{lstcounter}
+	\noindent\\\begin{minipage}{\textwidth}
+	\lstinputlisting{#1}
+	\end{minipage}\\}
+\newcommand{\lstl}[1]{\refstepcounter{lstcounter}
 	\lstinputlisting{#1}}
+%%% with syntax
+\newcommand{\lstx}[3]{\refstepcounter{lstcounter}
+	\noindent\\\begin{minipage}{\textwidth}
+	\lstinputlisting[title=#1,language=#3]{#2}
+	\end{minipage}\\}
+\newcommand{\lstxl}[3]{\refstepcounter{lstcounter}
+	\lstinputlisting[title=#1,language=#3]{#2}}
+% with title
 \newcommand{\lstt}[2]{\refstepcounter{lstcounter}
 	\lstinputlisting[title=#1]{#2}}
-\newcommand{\lstx}[3]{\refstepcounter{lstcounter}
-	\lstinputlisting[title=#1,language=#3]{#2}}
 
 %\usepackage{../texheader/lstrkt}\lstdefinestyle{rkt}{language=rkt}
 
