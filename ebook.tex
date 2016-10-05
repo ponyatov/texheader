@@ -74,6 +74,10 @@ extendedchars=\true
 	\noindent\\\begin{minipage}{\textwidth}
 	\lstinputlisting{#1}
 	\end{minipage}\\}
+\newcommand{\lsts}[2]{\refstepcounter{lstcounter}
+	\noindent\\\begin{minipage}{\textwidth}
+	\lstinputlisting[language=#2]{#1}
+	\end{minipage}\\}
 \newcommand{\lstl}[1]{\refstepcounter{lstcounter}
 	\lstinputlisting{#1}}
 %%% with syntax
