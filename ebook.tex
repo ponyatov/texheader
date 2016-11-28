@@ -91,6 +91,7 @@ extendedchars=\true
 \newcommand{\lstt}[2]{\refstepcounter{lstcounter}
 	\lstinputlisting[title=#1]{#2}}
 
+\usepackage{../texheader/lstmk}\lstdefinestyle{mk}{language=mk}
 %\usepackage{../texheader/lstrkt}\lstdefinestyle{rkt}{language=rkt}
 
 %% languages
@@ -101,8 +102,22 @@ extendedchars=\true
 \newcommand{\racket}{$Racket$}
 \newcommand{\lisp}{$Lisp$}
 
+%% OSes
+\newcommand{\win}{$Windows$}
+\newcommand{\linux}{$Linux$}
+
 %% syntax
 \newcommand{\class}[1]{\textcolor{green}{\texttt{#1}}}
+\newcommand{\var}[1]{\textbf{#1}}
+\newcommand{\file}[1]{\textbf{#1}}
+\newcommand{\prog}[1]{\textbf{#1}}
+
+%% std.programs
+\newcommand{\flex}{\textbf{flex}}
+\newcommand{\bison}{\textbf{bison}}
+\newcommand{\make}{\textbf{make}}
+\newcommand{\gvim}{$_g$\prog{vim}}
+\newcommand{\git}{\textbf{git}}
 
 % [nosep] option in lists/enums
 \usepackage{enumitem}
