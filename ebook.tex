@@ -21,10 +21,12 @@
 \usepackage{xcolor}
 \definecolor{red}{rgb}{0.7,0,0}		% R
 \definecolor{RED}{rgb}{0.7,0,0}
-\definecolor{green}{rgb}{0,0.7,0}	% G
-\definecolor{GREEN}{rgb}{0,0.7,0}
+\definecolor{green}{rgb}{0,0.6,0}	% G
+\definecolor{GREEN}{rgb}{0,0.6,0}
 \definecolor{blue}{rgb}{0,0,0.7}	% B
 \definecolor{BLUE}{rgb}{0,0,0.7}
+\definecolor{magenta}{rgb}{0.7,0,0.7}	% magenta
+\definecolor{MAGENTA}{rgb}{0.7,0,0.7}
 
 % Cyrillization
 %% \usepackage[T1,T2A]{fontenc}
@@ -107,17 +109,18 @@ extendedchars=\true
 \newcommand{\linux}{$Linux$}
 
 %% syntax
-\newcommand{\class}[1]{\textcolor{green}{\texttt{#1}}}
+\newcommand{\class}[1]{\textcolor{magenta}{\texttt{#1}}}
+\newcommand{\fn}[1]{\textbf{#1}}
 \newcommand{\var}[1]{\textbf{#1}}
 \newcommand{\file}[1]{\textbf{#1}}
 \newcommand{\prog}[1]{\textbf{#1}}
 
 %% std.programs
-\newcommand{\flex}{\textbf{flex}}
-\newcommand{\bison}{\textbf{bison}}
-\newcommand{\make}{\textbf{make}}
+\newcommand{\flex}{\prog{flex}}
+\newcommand{\bison}{\prog{bison}}
+\newcommand{\make}{\prog{make}}
 \newcommand{\gvim}{$_g$\prog{vim}}
-\newcommand{\git}{\textbf{git}}
+\newcommand{\git}{\prog{git}}
 
 % [nosep] option in lists/enums
 \usepackage{enumitem}
