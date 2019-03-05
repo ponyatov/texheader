@@ -12,6 +12,10 @@
 \usepackage{titlesec}
 \titleformat{\chapter}{\Large\bfseries}{\thechapter.}{1em}{}
 \titleformat{\section}{\large\bfseries}{\thesection.}{1em}{}
+%% fix first blank page
+%% https://tex.stackexchange.com/questions/140168/how-to-remove-a-blank-page-before-the-title-page
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}}
 
 % graphics
 \usepackage[pdftex]{graphicx}
