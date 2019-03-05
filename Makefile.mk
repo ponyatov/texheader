@@ -1,6 +1,23 @@
 MODULE ?= $(notdir $(CURDIR))
 
-TEX = $(MODULE).tex ../texheader/ebook.tex
+TODAY = $(shell date +%d%m%y)
+
+all:
+	$(MAKE) -C book
+	gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/screen \
+		-dNOPAUSE -dQUIET -dBATCH \
+		-sOutputFile=$(MODULE)_$(TODAY).pdf book/$(MODULE).pdf
+	echo make release
+
+release:
+	$(MAKE) all
+	git tag $(TODAY) && git push --tags
+	
+# /screen /ebook /prepress
+
+
+TEX  = $(MODULE).tex header.tex
+TEX += bib/bib.tex
 
 #TEX += ../texheader/cyr.tex
 #TEX += ../texheader/colors.tex
