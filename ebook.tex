@@ -21,6 +21,13 @@
 \usepackage[pdftex]{graphicx}
 \newcommand{\fig}[3]{\bigskip\noindent\includegraphics[#3]{#2}\textbf{#1}\bigskip}
 
+% graphics
+\usepackage[pdftex]{graphicx}
+\newcommand{\fig}[2]{\noindent\includegraphics[#2]{#1}}
+
+%% bibliography
+\newcommand{\bibfig}[1]{\fig{#1}{height=.6\textheight}}
+
 % xcolor fixes
 \usepackage{xcolor}
 \definecolor{red}{rgb}{0.7,0,0}		% R
